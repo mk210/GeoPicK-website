@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import "./features.scss";
 import Typography from "@material-ui/core/Typography";
-import { Grid, Card, Box, CardContent } from "@material-ui/core";
+import { Grid, Box } from "@material-ui/core";
 import Interface from "../image-assets/Group 14.png";
-import LocationOnIcon from "@material-ui/icons/LocationOn";
+// import LocationOnIcon from "@material-ui/icons/LocationOn";
 
 export class Features extends Component {
   render() {
