@@ -5,7 +5,6 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { createMuiTheme,ThemeProvider } from "@material-ui/core";
 
-
 const theme = createMuiTheme({
   palette: {
      primary: {

@@ -27,7 +27,8 @@ export class Landing extends Component {
   render() {
     return (
       <div>
-        <AppBar />
+        <Box m={-5} />
+        {/* <AppBar /> */}
         <Grid
           container
           alignContent="center"

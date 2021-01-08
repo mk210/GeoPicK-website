@@ -41,7 +41,7 @@ export class Body extends Component {
                 favourite designers andGeoPicK is designed for every
                 photographer. Using the app is very easy, just click pictures
                 and share them across a global platform filled with your
-                favourite designers and photographers...
+                favourite designers and photographers.
               </Typography>
             </Paper>
           </Grid>
