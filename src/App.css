@@ -1,0 +1,47 @@
+.App {
+  text-align: center;
+  overflow: hidden;
+}
+
+.App-header {
+  /* background-geoPick.png */
+  background-image: url("./image-assets/background-geoPick.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 700px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: #f56920;
+  background-attachment: fixed;
+}
+.body-theme {
+  background: rgb(245, 105, 32);
+  /* background: linear-gradient(
+    49deg,
+    rgba(245, 105, 32, 1) 0%,
+    rgba(250, 250, 250, 0.9643207624846813) 100%
+  ); */
+}
+
+.team-members-theme {
+  background: #1b1b1b;
+  /* background: linear-gradient(90deg, #f6d365 0%, #fda085 100%); */
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  display: grid;
+  /* padding: 2%; */
+}
+
+.features-theme {
+  background: #fafafa;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  display: flex;
+  padding: 2%;
+}

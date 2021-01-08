@@ -1,0 +1,22 @@
+div {
+  .title {
+    color: #fafafa;
+    font-weight: 600;
+    padding-top: 15%;
+  }
+
+  .subtitle {
+    font-weight: 600;
+  }
+}
+
+.body-card {
+  position: relative;
+  // width: auto;
+  padding: 3%;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-bottom: 8%;
+  margin-top: 2%;
+  border-radius: 18px;
+}

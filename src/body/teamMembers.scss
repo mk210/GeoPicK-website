@@ -1,0 +1,16 @@
+.main {
+  min-width: 275px;
+  display: "inline-block";
+  margin: 20px;
+  margin-top: 10px;
+  width: 300px;
+  border-radius: 30px;
+  opacity: 1;
+  backdrop-filter: blur(219.857px);
+  /* Note: backdrop-filter has minimal browser support */
+
+  //   padding-bottom: 20%;
+}
+.subtitle {
+  margin-bottom: 12;
+}

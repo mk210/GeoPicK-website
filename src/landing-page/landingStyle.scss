@@ -1,0 +1,59 @@
+.logo {
+  position: relative;
+  width: 200px;
+  height: 150px;
+}
+
+// div {
+//   .title {
+//     color: #fafafa;
+//     font-weight: 600;
+//     line-height: 100px;
+//   }
+
+//   .subtitle {
+//     font-weight: 600;
+//   }
+// }
+
+span {
+  color: #fafafa;
+  font-style: normal;
+  font-weight: 100;
+  font-size: 20px;
+  line-height: 100px;
+
+  /* identical to box height */
+}
+.subTagLine {
+  color: #fafafa;
+  font-weight: 300;
+}
+
+.button-landing-contained {
+  position: relative;
+  // padding: "30px";
+  width: 238px;
+  height: 55px;
+  border-radius: 22.5px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.button-landing-outlined {
+  position: absolute;
+  padding-left: 10px;
+  width: 238px;
+  height: 55px;
+  border-radius: 22.5px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.primary-button-text {
+  font-weight: 500;
+  color: #fafafa;
+}
+
+.secondary-button-text {
+  font-weight: 200;
+  color: #fafafa;
+}
