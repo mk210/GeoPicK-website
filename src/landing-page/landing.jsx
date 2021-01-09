@@ -9,7 +9,7 @@ import {
   Box,
 } from "@material-ui/core";
 import "./landingStyle.scss";
-import AppBar from "./appbar";
+// import AppBar from "./appbar";
 
 const theme = createMuiTheme({
   palette: {
