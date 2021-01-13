@@ -54,7 +54,11 @@ export class Landing extends Component {
               </Typography>
               <Box m={-2.5} />
               <Grid item>
-                <Typography variant="h1" className="subtitle">
+                <Typography
+                  variant="h1"
+                  style={{ fontWeight: "600" }}
+                  className="typewriter"
+                >
                   Captured
                 </Typography>
                 <Grid item>

@@ -8,6 +8,7 @@
   background-image: url("./image-assets/background-geoPick.png");
   background-repeat: no-repeat;
   background-size: cover;
+  background-attachment: fixed;
   background-position: center;
   min-height: 700px;
   display: flex;
@@ -16,7 +17,6 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: #f56920;
-  background-attachment: fixed;
 }
 .body-theme {
   background: rgb(245, 105, 32);
@@ -34,7 +34,7 @@
   align-items: center;
   justify-content: flex-start;
   display: grid;
-  /* padding: 2%; */
+  padding-bottom: 20px;
 }
 
 .features-theme {
@@ -44,4 +44,11 @@
   justify-content: flex-start;
   display: flex;
   padding: 2%;
+}
+
+.footer-theme {
+  background-image: url("./image-assets/background-geoPick.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
 }

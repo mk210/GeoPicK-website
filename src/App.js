@@ -31,7 +31,7 @@ function App() {
       <div className="team-members-theme">
         <TeamMembers />
       </div>
-      <div>
+      <div className="footer-theme">
       <Footer/>
       </div>
     </div>
