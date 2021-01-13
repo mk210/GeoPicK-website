@@ -10,6 +10,8 @@ import {
 } from "@material-ui/core";
 import "./landingStyle.scss";
 // import AppBar from "./appbar";
+// import styled from "styled-components";
+import { Link } from "react-scroll";
 
 const theme = createMuiTheme({
   palette: {
@@ -81,7 +83,16 @@ export class Landing extends Component {
                         className="button-landing-outlined"
                         style={{ borderRadius: "22.5px", margin: "20px" }}
                       >
-                        <div className="secondary-button-text">Learn More!</div>
+                        <Link
+                          activeClass="active"
+                          to="featuresSection"
+                          spy={true}
+                          smooth={true}
+                          duration={1000}
+                          className="secondary-button-text"
+                        >
+                          Learn More!
+                        </Link>
                       </Button>
                     </ThemeProvider>
                   </Grid>

@@ -5,7 +5,7 @@ import "./bodyStyles.scss";
 export class Body extends Component {
   render() {
     return (
-      <div>
+      <div id="featuresSection">
         <Grid
           container
           alignContent="center"
