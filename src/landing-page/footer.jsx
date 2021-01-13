@@ -1,12 +1,6 @@
 import React, { Component } from "react";
-import {
-  Container,
-  Card,
-  Typography,
-  Grid,
-  CardContent,
-} from "@material-ui/core";
-import Logo from "../image-assets/logo.svg";
+import { Card, Typography, Grid, CardContent } from "@material-ui/core";
+// import Logo from "../image-assets/logo.svg";
 // import BG from "../image-assets/background-geoPick.png";
 export class Footer extends Component {
   render() {
