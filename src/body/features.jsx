@@ -25,7 +25,14 @@ export class Features extends Component {
           </Grid>
         </Grid>
 
-        <Grid container direction="column" spacing={5} justify="flex-start">
+        <Grid container direction="row" spacing={1} justify="center">
+          <Grid item>
+            <CustomCard
+              title="Guess The Location"
+              content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididuntLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididuntLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt"
+              icon={<LocationOnRoundedIcon />}
+            />
+          </Grid>
           <Grid item>
             <img
               src={Interface}
@@ -35,18 +42,16 @@ export class Features extends Component {
               className="interface"
             ></img>
           </Grid>
+          <Grid item>
+            <CustomCard
+              title="Guess The Location"
+              content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt "
+              icon={<LocationOnRoundedIcon />}
+            />
+          </Grid>
         </Grid>
-        <CustomCard
-          title="Guess The Location"
-          content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt "
-          icon={<LocationOnRoundedIcon />}
-        />
+
         <br></br>
-        <CustomCard
-          title="Guess The Location"
-          content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt "
-          icon={<LocationOnRoundedIcon />}
-        />
       </div>
     );
   }
