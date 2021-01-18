@@ -6,10 +6,11 @@ import { Body } from "./body/body";
 import { TeamMembers } from "./body/teamMembers";
 import {Features} from "./body/features";
 import {Footer} from "./landing-page/footer";
+import RoadMap from "./body/roadmap"
 // import Background from "./image-assets/background-geoPick.png"
 const theme = createMuiTheme({
   typography: {
-    fontFamily: [
+    fontFamily: [ 
       'Poppins',
       'sans-serif',
     ].join(','),
@@ -30,6 +31,9 @@ function App() {
       </div>
       <div className="team-members-theme">
         <TeamMembers />
+      </div>
+      <div>
+      <RoadMap/>
       </div>
       <div className="footer-theme">
       <Footer/>
