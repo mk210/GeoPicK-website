@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { Card, Typography, Grid, Link } from "@material-ui/core";
-import DialogBox from "./terms";
 // import Logo from "../image-assets/logo.svg";
 // import BG from "../image-assets/background-geoPick.png";
 export class Footer extends Component {
