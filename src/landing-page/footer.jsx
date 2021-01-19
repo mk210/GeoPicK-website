@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Card, Typography, Grid, Link } from "@material-ui/core";
+import Terms from "./terms";
 // import Logo from "../image-assets/logo.svg";
 // import BG from "../image-assets/background-geoPick.png";
 export class Footer extends Component {
@@ -40,8 +41,7 @@ export class Footer extends Component {
                   }}
                   justify="center"
                 >
-                  <Link>Terms and Conditions</Link> |{" "}
-                  <Link>Privacy Policy</Link>
+                  <Terms /> | <Link>Privacy Policy</Link>
                 </Card>
               </Typography>
             </Grid>
