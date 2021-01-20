@@ -97,6 +97,18 @@ export class TeamMembers extends Component {
             position="Technical Writer | developer"
             desc="Need a description"
           />
+
+          <MemberCard
+            name="Syed Khaja"
+            position="Fontend | Backend developer"
+            desc="Need a description"
+          />
+
+          <MemberCard
+            name="Rana"
+            position="Backend"
+            desc="Need a description"
+          />
         </Grid>
       </div>
     );
