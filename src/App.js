@@ -33,11 +33,11 @@ function App() {
       <div>
         <PrototypeReview/>
       </div>
-      <div className="team-members-theme">
-        <TeamMembers />
-      </div>
       <div>
       <RoadMap/>
+      </div>
+      <div className="team-members-theme">
+        <TeamMembers />
       </div>
       <div className="footer-theme">
       <Footer/>

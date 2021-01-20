@@ -7,6 +7,13 @@ import {
   Box,
 } from "@material-ui/core";
 import React, { Component } from "react";
+import { ThemeProvider, createMuiTheme } from "@material-ui/core/styles";
+
+const theme = createMuiTheme({
+  typography: {
+    fontFamily: ["Montserrat", "sans-serif"].join(","),
+  },
+});
 
 function ReviewCard(props) {
   return (
@@ -26,9 +33,11 @@ function ReviewCard(props) {
           height: "250px",
         }}
       >
-        <Typography variant="h5" style={{ fontWeight: 300 }}>
-          <CardContent>{props.desc}</CardContent>
-        </Typography>
+        <ThemeProvider theme={theme}>
+          <Typography variant="h5" style={{ fontWeight: 300 }}>
+            <CardContent>{props.desc}</CardContent>
+          </Typography>
+        </ThemeProvider>
 
         <Box m={1}></Box>
         <div align="center">

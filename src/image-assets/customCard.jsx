@@ -1,6 +1,12 @@
 import React, { Component } from "react";
 import { Card, CardContent, Typography } from "@material-ui/core";
+import { ThemeProvider, createMuiTheme } from "@material-ui/core/styles";
 
+const theme = createMuiTheme({
+  typography: {
+    fontFamily: ["Montserrat", "sans-serif"].join(","),
+  },
+});
 export class CustomCard extends Component {
   render() {
     return (
@@ -24,7 +30,14 @@ export class CustomCard extends Component {
               {"   "}
               {this.props.title}
             </Typography>
-            <CardContent style={{}}>{this.props.content}</CardContent>
+
+            <CardContent>
+              <ThemeProvider theme={theme}>
+                <Typography variant="body1" style={{ fontWeight: "300" }}>
+                  {this.props.content}
+                </Typography>
+              </ThemeProvider>
+            </CardContent>
           </div>
         </Card>
       </div>

@@ -13,6 +13,12 @@ import "./landingStyle.scss";
 // import styled from "styled-components";
 import { Link } from "react-scroll";
 
+const fontTheme = createMuiTheme({
+  typography: {
+    fontFamily: ["Montserrat", "sans-serif"].join(","),
+  },
+});
+
 const theme = createMuiTheme({
   palette: {
     primary: {
@@ -62,12 +68,14 @@ export class Landing extends Component {
                   Captured
                 </Typography>
                 <Grid item>
-                  <Typography variant="h6" gutterBottom>
-                    <span className="subTagLine">
-                      A photo sharing app like{" "}
-                    </span>
-                    never before
-                  </Typography>
+                  <ThemeProvider theme={fontTheme}>
+                    <Typography variant="h6" gutterBottom>
+                      <span className="subTagLine">
+                        A photo sharing app like{" "}
+                      </span>
+                      never before
+                    </Typography>
+                  </ThemeProvider>
 
                   <Grid item justify="center">
                     <ThemeProvider theme={theme}>
