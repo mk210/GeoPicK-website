@@ -38,8 +38,8 @@ export class Footer extends Component {
                     width: "50%",
                     margin: "auto",
                     textAlign: "center",
+                    borderRadius: "20px",
                   }}
-                  justify="center"
                 >
                   <Terms /> | <Link>Privacy Policy</Link>
                 </Card>

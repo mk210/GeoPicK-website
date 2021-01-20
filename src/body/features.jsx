@@ -3,7 +3,7 @@ import "./features.scss";
 import Typography from "@material-ui/core/Typography";
 import { Grid, Box } from "@material-ui/core";
 import Interface from "../image-assets/Group 14.png";
-import { CustomCard } from "../image-assets/customCard";
+import { CustomCard } from "./customCard";
 import LocationOnRoundedIcon from "@material-ui/icons/LocationOnRounded";
 
 export class Features extends Component {
