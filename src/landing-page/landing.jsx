@@ -81,23 +81,23 @@ export class Landing extends Component {
                           Try the app now!
                         </div>
                       </Button>
-                      <Button
-                        variant="outlined"
-                        color="primary"
-                        className="button-landing-outlined"
-                        style={{ borderRadius: "22.5px", margin: "20px" }}
+                      <Link
+                        activeClass="active"
+                        to="featuresSection"
+                        spy={true}
+                        smooth={true}
+                        duration={1000}
+                        className="secondary-button-text"
                       >
-                        <Link
-                          activeClass="active"
-                          to="featuresSection"
-                          spy={true}
-                          smooth={true}
-                          duration={1000}
-                          className="secondary-button-text"
+                        <Button
+                          variant="outlined"
+                          color="primary"
+                          className="button-landing-outlined"
+                          style={{ borderRadius: "22.5px", margin: "20px" }}
                         >
                           Learn More!
-                        </Link>
-                      </Button>
+                        </Button>
+                      </Link>
                     </ThemeProvider>
                   </Grid>
                 </Grid>

@@ -792,7 +792,10 @@ export default function Terms() {
         </DialogContent>
         <DialogActions>
           <ThemeProvider theme={theme}>
-            <Button onClick={handleClose} color="secondary">
+            <Button
+              onClick={handleClose}
+              style={{ textDecorationColor: "#f56920" }}
+            >
               Close
             </Button>
           </ThemeProvider>
