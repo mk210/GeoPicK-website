@@ -118,10 +118,10 @@ class PrototypeReview extends Component {
         }}
       >
         <Typography
-          variant="h3"
-          style={{ fontWeight: "600", marginBottom: "20px", color: "#fafafa" }}
+          variant="h2"
+          style={{ color: "#FAFAFA", paddingBottom: "3%", fontWeight: "600" }}
         >
-          Prototype review
+          Prototype Review
         </Typography>
         <Grid
           container
