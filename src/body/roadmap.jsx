@@ -29,7 +29,7 @@ function RoadMapItem(props) {
     return (
       <TimelineItem>
         <TimelineSeparator>
-          <TimelineDot style={{ background: "#1b1b1b" }}>
+          <TimelineDot style={{ background: "#fafafa", color: "#1b1b1b" }}>
             {props.icon}
           </TimelineDot>
           <TimelineConnector />
@@ -86,7 +86,10 @@ class RoadMap extends React.Component {
       <div
         style={{ textAlign: "center", justifyItems: "center", padding: "3%" }}
       >
-        <Typography variant="h2" style={{ fontWeight: "600" }}>
+        <Typography
+          variant="h2"
+          style={{ fontWeight: "600", color: "#fafafa" }}
+        >
           Product Roadmap
         </Typography>
         <Timeline align="alternate">

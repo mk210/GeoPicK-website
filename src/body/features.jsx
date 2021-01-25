@@ -42,7 +42,18 @@ export class Features extends Component {
               className="interface"
             ></img>
           </Grid>
+        </Grid>
+        <Grid container direction="row" spacing={1} justify="center">
           <Grid item>
+            <Grid item>
+              <img
+                src={Interface}
+                alt="Main Interface"
+                width="324px"
+                height="700px"
+                className="interface"
+              ></img>
+            </Grid>
             <CustomCard
               title="Guess The Location"
               content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt "

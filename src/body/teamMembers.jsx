@@ -63,45 +63,45 @@ export class TeamMembers extends Component {
         >
           <MemberCard
             name="Megha"
-            position="Scrum Master"
+            position="Scrum Master | Frontend"
             desc="A scrum master who likes to complete all the tasks given
                   effectively and efficiently."
           />
 
           <MemberCard
             name="Aditya Suresh"
-            position="Backend"
+            position="Database Admin | Backend"
             desc="Need a description"
           />
 
           <MemberCard
             name="Aditya Thakur"
-            position="Backend"
+            position="Database Admin | Backend"
             desc="Need a description"
           />
 
           <MemberCard
             name="Mohit Katta"
-            position="Design Manager"
-            desc="A designer who likes to create a picture perfect design. Makes his own illustarations rather than using premade components."
+            position="Design Manager | Frontend"
+            desc="A designer who creates a picture perfect design and a smooth UI."
           />
 
           <MemberCard
             name="Jesse Raju Thomas"
-            position="Development Manager"
+            position="Development Manager | Frontend "
             desc="The go-to react developer."
           />
 
           <MemberCard
             name="Jeet Kailash Solanki"
-            position="Technical Writer | developer"
-            desc="Need a description"
+            position="Technical Writer | Frontend"
+            desc="A skilled wordsmith and a creative minded dev"
           />
 
           <MemberCard
             name="Syed Khaja"
-            position="Fontend | Backend developer"
-            desc="Need a description"
+            position="Frontend"
+            desc="An agile dev who manages backend + frontend connectivity easily."
           />
 
           <MemberCard

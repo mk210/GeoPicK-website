@@ -16,7 +16,7 @@ export class CustomCard extends Component {
             borderRadius: "20px",
             background: "#FAFAFA",
             width: "50%",
-            border: "5px solid #F56920",
+            border: "3px solid #F56920",
             maxWidth: "700px",
           }}
         >
