@@ -9,7 +9,6 @@ import {
   Box,
 } from "@material-ui/core";
 import "./landingStyle.scss";
-// import AppBar from "./appbar";
 // import styled from "styled-components";
 import { Link } from "react-scroll";
 
@@ -36,7 +35,6 @@ export class Landing extends Component {
     return (
       <div>
         <Box m={-5} />
-        {/* <AppBar /> */}
         <Grid
           container
           alignContent="center"

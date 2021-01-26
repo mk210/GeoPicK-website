@@ -15,9 +15,9 @@ export class CustomCard extends Component {
           style={{
             borderRadius: "20px",
             background: "#FAFAFA",
-            width: "50%",
+            minWidth: "20vw",
+            maxWidth: "25vw",
             border: "3px solid #F56920",
-            maxWidth: "700px",
           }}
         >
           <div
