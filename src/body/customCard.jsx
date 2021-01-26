@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Card, CardContent, Typography } from "@material-ui/core";
+import { Card, CardContent, Typography, Grid } from "@material-ui/core";
 import { ThemeProvider, createMuiTheme } from "@material-ui/core/styles";
 
 const theme = createMuiTheme({
@@ -10,7 +10,7 @@ const theme = createMuiTheme({
 export class CustomCard extends Component {
   render() {
     return (
-      <div>
+      <Grid item>
         <Card
           style={{
             borderRadius: "20px",
@@ -38,7 +38,7 @@ export class CustomCard extends Component {
             </CardContent>
           </div>
         </Card>
-      </div>
+      </Grid>
     );
   }
 }
