@@ -35,11 +35,9 @@ function MemberCard(props) {
           <Typography variant="h5" component="h2">
             {props.name}
           </Typography>
-          <Typography className="subtitle" color="textSecondary">
-            {props.position}
-          </Typography>
+          <Typography className="subtitle">{props.position}</Typography>
           <ThemeProvider theme={theme}>
-            <Typography variant="body2" component="p">
+            <Typography variant="body2" component="p" color="textSecondary">
               {props.desc}
             </Typography>
           </ThemeProvider>
@@ -66,7 +64,7 @@ export class TeamMembers extends Component {
           container
           alignContent="center"
           direction="row"
-          justify="space-around"
+          justify="space-evenly"
           spacing={1}
           wrap="wrap"
         >
@@ -101,15 +99,15 @@ export class TeamMembers extends Component {
 
           <MemberCard
             name="Jesse Raju Thomas"
-            position="Development Manager | Frontend "
-            desc="The go-to react developer."
+            position="Dev Manager | Frontend "
+            desc="The go-to react developer specializing in Typescript."
             icon={developer}
           />
 
           <MemberCard
             name="Jeet Kailash Solanki"
             position="Technical Writer | Frontend"
-            desc="A skilled wordsmith and a creative minded dev"
+            desc="A skilled wordsmith and a creative minded dev."
             icon={writer}
           />
 
