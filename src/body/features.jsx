@@ -59,7 +59,7 @@ export class Features extends Component {
             icon={<SystemUpdateAltRoundedIcon />}
           />
           <CustomCard
-            title="No Download required"
+            title="No Download required!"
             content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt "
             icon={<SystemUpdateAltRoundedIcon />}
           />
