@@ -23,7 +23,10 @@ export class CustomCard extends Component {
           <div
             style={{ textAlign: "center", padding: "10px", paddingTop: "20px" }}
           >
-            <Typography variant="h5" style={{ color: "F56920" }}>
+            <Typography
+              variant="h5"
+              style={{ color: "F56920", fontWeight: 500 }}
+            >
               {this.props.icon}
               {"   "}
               {this.props.title}

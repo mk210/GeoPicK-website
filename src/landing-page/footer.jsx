@@ -1,8 +1,7 @@
 import React, { Component } from "react";
-import { Card, Typography, Grid, Link } from "@material-ui/core";
+import { Card, Typography, Grid } from "@material-ui/core";
 import Terms from "./terms";
-// import Logo from "../image-assets/logo.svg";
-// import BG from "../image-assets/background-geoPick.png";
+import { Link } from "react-scroll";
 export class Footer extends Component {
   render() {
     return (
@@ -41,7 +40,9 @@ export class Footer extends Component {
                     borderRadius: "20px",
                   }}
                 >
-                  <Terms /> | <Link>Privacy Policy</Link>
+                  <Link>Home</Link>
+                  <Link>Home</Link>
+                  <Terms />
                 </Card>
               </Typography>
             </Grid>
