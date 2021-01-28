@@ -53,7 +53,7 @@ export class Features extends Component {
             ></img>
           </Grid> */}
           <CustomCard
-            title="Integrated Google sign-in"
+            title="Integrated Google signup"
             content="Tired of registering for hundreds of social media apps? Well, don't worry anymore, Use you existing google account to log into GeoPicK and start your journey with us. No sign up hassle. Don't have a Google account, sign up for an account for free today! "
             icon={<AssignmentIndRoundedIcon />}
           />
