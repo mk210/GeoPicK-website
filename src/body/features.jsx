@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "./features.scss";
 import Typography from "@material-ui/core/Typography";
-import { Grid, Box } from "@material-ui/core";
+import { Grid } from "@material-ui/core";
 // import Interface from "../image-assets/Group 14.png";
 import { CustomCard } from "./customCard";
 
