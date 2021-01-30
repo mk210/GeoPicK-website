@@ -85,6 +85,7 @@ class RoadMap extends React.Component {
     return (
       <div
         style={{ textAlign: "center", justifyItems: "center", padding: "3%" }}
+        id="roadmap"
       >
         <Typography
           variant="h2"

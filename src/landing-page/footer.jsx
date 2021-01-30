@@ -7,7 +7,7 @@ const marginValue = "10px";
 
 function FooterLink(props) {
   return (
-    <Grid item style={{ marginLeft: marginValue }}>
+    <Grid item style={{ paddingLeft: marginValue, paddingTop: marginValue }}>
       <ScrollLink
         activeClass="active"
         to={props.id}
@@ -60,13 +60,31 @@ export class Footer extends Component {
                   }}
                 >
                   <Grid container spacing={1} direction="row" justify="center">
-                    <FooterLink id="featuresSection" name="Features" />
-                    <Grid item style={{ marginLeft: marginValue }}>
+                    <FooterLink id="features" name="Features" />
+
+                    <FooterLink id="roadmap" name="Roadmap" />
+                    <FooterLink id="review" name="Prototype Review" />
+                    <Grid
+                      item
+                      style={{
+                        paddingLeft: marginValue,
+                        paddingTop: marginValue,
+                      }}
+                    >
                       <Terms />
                     </Grid>
-                    <FooterLink id="featuresSection" name="Roadmap" />
-                    <FooterLink id="featuresSection" name="Prototype Review" />
                   </Grid>
+                  <br></br>
+                  <Typography variant="body2" style={{ color: "#1b1b1b" }}>
+                    This website is licensed under{" "}
+                    <a
+                      href="https://creativecommons.org/licenses/by/4.0/"
+                      target="blank"
+                      color="#f56920"
+                    >
+                      Creative Commons Attribution 4.0 International
+                    </a>
+                  </Typography>
                 </Card>
               </Typography>
             </Grid>

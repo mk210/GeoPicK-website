@@ -20,17 +20,7 @@ export class Features extends Component {
           <Typography variant="h2">
             <div className="titles">Features</div>
           </Typography>
-
-          <Box m={-4} />
-          <Grid item>
-            <Typography variant="body2">
-              <div>Tip: Hover on the photo below 👇</div>
-              <br></br>
-              <br></br>
-            </Typography>
-          </Grid>
         </Grid>
-
         <Grid
           container
           direction="row"

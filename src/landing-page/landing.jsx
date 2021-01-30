@@ -89,7 +89,7 @@ export class Landing extends Component {
                       </Button>
                       <Link
                         activeClass="active"
-                        to="featuresSection"
+                        to="body"
                         spy={true}
                         smooth={true}
                         duration={1000}

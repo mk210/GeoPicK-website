@@ -11,7 +11,7 @@ const theme = createMuiTheme({
 export class Body extends Component {
   render() {
     return (
-      <div id="featuresSection">
+      <div id="body">
         <Grid
           container
           alignContent="center"
