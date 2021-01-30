@@ -1,7 +1,26 @@
 import React, { Component } from "react";
-import { Card, Typography, Grid } from "@material-ui/core";
+import { Card, Typography, Grid, Link } from "@material-ui/core";
 import Terms from "./terms";
-import { Link } from "react-scroll";
+import { Link as ScrollLink } from "react-scroll";
+
+const marginValue = "10px";
+
+function FooterLink(props) {
+  return (
+    <Grid item style={{ marginLeft: marginValue }}>
+      <ScrollLink
+        activeClass="active"
+        to={props.id}
+        spy={true}
+        smooth={true}
+        duration={1000}
+        // className="secondary-button-text"
+      >
+        <Link>{props.name}</Link>
+      </ScrollLink>
+    </Grid>
+  );
+}
 export class Footer extends Component {
   render() {
     return (
@@ -40,9 +59,14 @@ export class Footer extends Component {
                     borderRadius: "20px",
                   }}
                 >
-                  <Link>Home</Link>
-                  <Link>Home</Link>
-                  <Terms />
+                  <Grid container spacing={1} direction="row" justify="center">
+                    <FooterLink id="featuresSection" name="Features" />
+                    <Grid item style={{ marginLeft: marginValue }}>
+                      <Terms />
+                    </Grid>
+                    <FooterLink id="featuresSection" name="Roadmap" />
+                    <FooterLink id="featuresSection" name="Prototype Review" />
+                  </Grid>
                 </Card>
               </Typography>
             </Grid>

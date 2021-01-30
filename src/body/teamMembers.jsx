@@ -79,14 +79,14 @@ export class TeamMembers extends Component {
           <MemberCard
             name="Aditya Suresh"
             position="Database Admin | Backend"
-            desc="Need a description"
+            desc="A Database handler who can structure data with ease."
             icon={backendAdmin}
           />
 
           <MemberCard
             name="Aditya Thakur"
             position="Database Admin | Backend"
-            desc="Need a description"
+            desc="Database administrator that can structure out data at it's best efficiency."
             icon={backendAdmin}
           />
 
@@ -119,7 +119,7 @@ export class TeamMembers extends Component {
           />
 
           <MemberCard
-            name="Rana"
+            name="Rana Talha"
             position="Backend"
             desc="A database user who aims for ease of use for everyone."
             icon={backend}

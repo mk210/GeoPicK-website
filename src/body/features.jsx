@@ -15,7 +15,7 @@ import DevicesRoundedIcon from "@material-ui/icons/DevicesRounded";
 export class Features extends Component {
   render() {
     return (
-      <div>
+      <div id="features">
         <Grid container spacing={2} justify="Center" direction="column">
           <Typography variant="h2">
             <div className="titles">Features</div>

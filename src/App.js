@@ -2,6 +2,7 @@
 import './App.css';
 import { Landing } from "./landing-page/landing";
 import { ThemeProvider, createMuiTheme } from '@material-ui/core/styles';
+import {Box} from '@material-ui/core';
 import { Body } from "./body/body";
 import { TeamMembers } from "./body/teamMembers";
 import {Features} from "./body/features";
