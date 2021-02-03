@@ -7,6 +7,7 @@ import {
   createMuiTheme,
   ThemeProvider,
   Box,
+  Badge,
 } from "@material-ui/core";
 import "./landingStyle.scss";
 // import styled from "styled-components";
@@ -77,16 +78,23 @@ export class Landing extends Component {
 
                   <Grid item justify="center">
                     <ThemeProvider theme={theme}>
-                      <Button
-                        variant="contained"
-                        color="primary"
-                        className="button-landing-contained"
-                        style={{ borderRadius: "22.5px" }}
-                      >
-                        <div className="primary-button-text">
-                          Try the app now!
-                        </div>
-                      </Button>
+                      <Badge color="secondary" badgeContent="BETA">
+                        <Button
+                          variant="contained"
+                          color="primary"
+                          className="button-landing-contained"
+                          style={{ borderRadius: "22.5px" }}
+                        >
+                          <a
+                            href="http://geopick.netlify.app/welcome"
+                            target="blank"
+                            className="primary-button-text"
+                          >
+                            Try the app now!
+                          </a>
+                        </Button>
+                      </Badge>
+                      <Box width="10px" />
                       <Link
                         activeClass="active"
                         to="body"
