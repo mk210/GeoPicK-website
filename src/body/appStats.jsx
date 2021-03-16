@@ -7,6 +7,7 @@ import {
   createMuiTheme,
   ThemeProvider,
   Divider,
+  Grid,
 } from "@material-ui/core";
 import CountUp from "react-countup";
 
@@ -18,76 +19,82 @@ const theme = createMuiTheme({
 
 const StatsCard = (props) => {
   return (
-    <Card
-      style={{
-        borderRadius: "20px",
-        background: "#FAFAFA",
-        minWidth: "20vw",
-        maxWidth: "25vw",
-        wrap: "wrap",
-        border: "3px solid #F56920",
-        boxShadow: "0px 100px 250px rgba(0, 0, 0, 0.25)",
-      }}
-    >
-      <ThemeProvider theme={theme}>
-        <CardContent>
-          <Typography
-            style={{
-              fontWeight: "lighter",
-              fontSize: "30px",
-              textAlign: "center",
-            }}
-          >
-            {props.title}
-          </Typography>
-        </CardContent>
-        <Divider />
-        <CardContent>
-          <Typography
-            style={
-              {
-                //   color: "#1b1b1b",
-              }
-            }
-          >
-            <CountUp
-              start={props.start}
-              end={props.stats}
-              delay={0}
-              redraw={true}
-              duration={4}
+    <Grid item>
+      <Card
+        style={{
+          borderRadius: "20px",
+          background: "#FAFAFA",
+          minWidth: "20vw",
+          maxWidth: "25vw",
+          wrap: "wrap",
+          border: "3px solid #F56920",
+          boxShadow: "0px 100px 250px rgba(0, 0, 0, 0.25)",
+          marginRight: "50px",
+          padding: "20px",
+          textAlign: "center",
+          // margin: "15px",
+        }}
+      >
+        <ThemeProvider theme={theme}>
+          <CardContent>
+            <Typography
+              style={{
+                fontWeight: "lighter",
+                fontSize: "30px",
+                textAlign: "center",
+              }}
             >
-              {({ countUpRef }) => (
-                <div>
-                  <span
-                    ref={countUpRef}
-                    style={{
-                      fontSize: "100px",
-                      color: "#1b1b1b",
-                      fontWeight: "bold",
-                      textAlign: "center",
-                    }}
-                  />
-                  {/* <button>Start</button> */}
-                </div>
-              )}
-            </CountUp>
-          </Typography>
-        </CardContent>
-        <Box m={-2}></Box>
-        <CardContent>
-          <Typography
-            style={{
-              fontWeight: "lighter",
-              fontSize: "20px",
-              textAlign: "center",
-            }}
-          >
-            {props.subtitle}
-          </Typography>
-        </CardContent>
-      </ThemeProvider>
-    </Card>
+              {props.title}
+            </Typography>
+          </CardContent>
+          <Divider />
+          <CardContent>
+            <Typography
+              style={
+                {
+                  //   color: "#1b1b1b",
+                }
+              }
+            >
+              <CountUp
+                start={props.start}
+                end={props.stats}
+                delay={0}
+                redraw={true}
+                duration={4}
+              >
+                {({ countUpRef }) => (
+                  <div>
+                    <span
+                      ref={countUpRef}
+                      style={{
+                        fontSize: "100px",
+                        color: "#1b1b1b",
+                        fontWeight: "bold",
+                        textAlign: "center",
+                      }}
+                    />
+                    {/* <button>Start</button> */}
+                  </div>
+                )}
+              </CountUp>
+            </Typography>
+          </CardContent>
+          <Box m={-2}></Box>
+          <CardContent>
+            <Typography
+              style={{
+                fontWeight: "lighter",
+                fontSize: "20px",
+                textAlign: "center",
+              }}
+            >
+              {props.subtitle}
+            </Typography>
+          </CardContent>
+        </ThemeProvider>
+      </Card>
+    </Grid>
   );
 };
 class AppStats extends Component {
@@ -98,12 +105,30 @@ class AppStats extends Component {
           Application statistics
         </Typography>
         <br></br>
-        <StatsCard
-          title="The total number of posts"
-          start="1"
-          stats="60"
-          subtitle="and counting..."
-        />
+        <Grid
+          container
+          direction="row"
+          style={{ margin: "20px", justifyContent: "center" }}
+        >
+          <StatsCard
+            title="Total number of posts"
+            start="1"
+            stats="60"
+            subtitle="and counting..."
+          />
+          <StatsCard
+            title="Total number of users joined"
+            start="1"
+            stats="200"
+            subtitle="and joining..."
+          />
+          <StatsCard
+            title="Total number of likes"
+            start="1"
+            stats="500000"
+            subtitle="and counting..."
+          />
+        </Grid>
       </Box>
     );
   }

@@ -18,7 +18,7 @@ import HomeRoundedIcon from "@material-ui/icons/HomeRounded";
 import VisibilityRoundedIcon from "@material-ui/icons/VisibilityRounded";
 import MobileScreenShareRoundedIcon from "@material-ui/icons/MobileScreenShareRounded";
 import NewReleasesRoundedIcon from "@material-ui/icons/NewReleasesRounded";
-import { TimelineElement } from "./roadmapV2";
+// import { TimelineElement } from "./roadmapV2";
 const theme = createMuiTheme({
   typography: {
     fontFamily: ["Montserrat", "sans-serif"].join(","),
@@ -36,7 +36,18 @@ function RoadMapItem(props) {
           <TimelineConnector />
         </TimelineSeparator>
         <TimelineContent>
-          <Paper elevation={5} style={{ margin: "auto", padding: "10px" }}>
+          <Paper
+            elevation={5}
+            style={{
+              margin: "auto",
+              padding: "10px",
+              color: "#1b1b1b",
+              background: "#fafafa",
+              borderRadius: "20px",
+              minWidth: "35%",
+              maxWidth: "80%",
+            }}
+          >
             <Typography variant="h6" component="h1" align="right">
               {props.title}{" "}
               <Typography variant="body2" color="textSecondary" gutterBottom>
@@ -62,7 +73,18 @@ function RoadMapItem(props) {
           <TimelineConnector />
         </TimelineSeparator>
         <TimelineContent>
-          <Paper elevation={5} style={{ margin: "auto", padding: "10px" }}>
+          <Paper
+            elevation={5}
+            style={{
+              margin: "auto",
+              padding: "10px",
+              color: "#fafafa",
+              background: "#F56920",
+              borderRadius: "20px",
+              minWidth: "50%",
+              maxWidth: "80%",
+            }}
+          >
             <Typography variant="h6" component="h1" align="left">
               {props.title}{" "}
               <Typography variant="body2" color="textSecondary" gutterBottom>
@@ -95,60 +117,60 @@ class RoadMap extends React.Component {
           Product Roadmap
         </Typography>
         <Timeline align="alternate">
-          <TimelineElement
+          <RoadMapItem
             title="Initiating Product Vision"
             desc=" A solution to connect the world through the nature around them."
             time="October 2020"
             icon={<PublicRoundedIcon />}
           />
-          <TimelineElement
+          <RoadMapItem
             title="Initiating Product Strategy"
             desc="Key points and features discussed before developing the application."
             time="November 2020"
             tag="alt"
             icon={<SettingsApplicationsRoundedIcon />}
           />
-          <TimelineElement
+          <RoadMapItem
             title="Proposing GeoPicK"
             desc="Our image-sharing application as a uniform ground for hobbyists, academicians and gamers alike."
             time="December 2020"
             icon={<CameraEnhanceRoundedIcon />}
           />
-          <TimelineElement
+          <RoadMapItem
             title="The App Design and market research"
             desc="Creating the Design consumers want and discussion on collecting user data as per GDPR"
             time="January 2021"
             tag="alt"
             icon={<BorderColorRoundedIcon />}
           />
-          <TimelineElement
+          <RoadMapItem
             title="The App backend"
             desc="Creating Database architecture based on user data"
             time="January 2021"
             icon={<StorageRoundedIcon />}
           />
 
-          <TimelineElement
+          <RoadMapItem
             title="The App"
             desc="Creating the user registration interfaces and the user home screen interface with Guess The Location button"
             time="Rolling Out - February 2021"
             icon={<HomeRoundedIcon />}
             tag="alt"
           />
-          <TimelineElement
+          <RoadMapItem
             title="Product Demo"
             desc="First round of product demo "
             time="Rolling Out - February 2021"
             icon={<VisibilityRoundedIcon />}
           />
-          <TimelineElement
+          <RoadMapItem
             title="Cross-Platform sharing"
             desc="Enabling the users for cross-platform sharing on our Progressive-web application."
             time="Rolling Out - February 2021"
             icon={<MobileScreenShareRoundedIcon />}
             tag="alt"
           />
-          <TimelineElement
+          <RoadMapItem
             title="The Final Application"
             desc="Game development for 'Guess the Location'."
             time="Rolling Out - February 2021"

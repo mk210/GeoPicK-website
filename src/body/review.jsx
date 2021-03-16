@@ -147,7 +147,6 @@ class PrototypeReview extends Component {
             lightDesc="understood the function of"
             heavyDesc="each icon"
           />
-
           <ReviewCard
             name="Subject #1"
             desc='"Overall the app looks amazing. I love the UI and color scheme. Good job."'
