@@ -13,9 +13,6 @@ import AppStats from "./body/appStats";
 import Header from "./landing-page/drawer";
 import News from "./body/news";
 
-// firebase calls
-import {getPostCount, getUserCount} from './firebase'
-import { useEffect } from "react";
 // import Background from "./image-assets/background-geoPick.png"
 const theme = createMuiTheme({
   typography: {
@@ -25,11 +22,6 @@ const theme = createMuiTheme({
 
 function App() {
 
-  // testing data fetching
-  useEffect(async () => {
-    console.log("Post count:", await getPostCount())
-    console.log("User count: ", await getUserCount())
-  })
   return (
     <div>
       <ThemeProvider theme={theme}>

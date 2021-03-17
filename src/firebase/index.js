@@ -26,6 +26,16 @@ export async function getPostCount() {
     return (await firestore.collection("Posts").get()).docs.length
 }
 
+// use this to get post count from firebase
+export async function getLikeCount() {
+    let count = 0;
+    (await firestore.collection("Posts").get()).docs.forEach(async doc => {
+        let like = doc.data().likes_count;
+        if (like) count += like;
+    })
+    return count;
+}
+
 export default firestore;
 // use -> import db from './firebase' 
 // from root to use this db collection

@@ -10,6 +10,7 @@ import {
   Grid,
 } from "@material-ui/core";
 import CountUp from "react-countup";
+import {getPostCount, getUserCount, getLikeCount} from '../firebase'
 
 const theme = createMuiTheme({
   typography: {
@@ -98,6 +99,17 @@ const StatsCard = (props) => {
   );
 };
 class AppStats extends Component {
+  state = {
+    users: 0,
+    posts: 0,
+    likes: 0
+  }
+  async componentDidMount() {
+    const userCount = await getUserCount();
+    const postCount = await getPostCount();
+    const likeCount = await getLikeCount();
+    this.setState({users: userCount, posts: postCount, likes: likeCount});
+  }
   render() {
     return (
       <Box style={{ padding: "20px" }}>
@@ -113,19 +125,19 @@ class AppStats extends Component {
           <StatsCard
             title="Total number of posts"
             start="1"
-            stats="60"
+            stats={this.state.posts}
             subtitle="and counting..."
           />
           <StatsCard
             title="Total number of users joined"
             start="1"
-            stats="200"
+            stats={this.state.users}
             subtitle="and joining..."
           />
           <StatsCard
             title="Total number of likes"
             start="1"
-            stats="500000"
+            stats={this.state.likes}
             subtitle="and counting..."
           />
         </Grid>
