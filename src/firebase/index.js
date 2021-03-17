@@ -1,4 +1,3 @@
-import 'firebase/database';
 import firebase from 'firebase';
 // import '@firebase/messaging';
 //import './sign-in screen';
@@ -15,7 +14,18 @@ if (!firebase.apps.length) {
     firebase.initializeApp(config);
 }
 
-const db = firebase.database();
-export default db;
+export const firestore = firebase.firestore();
+
+// use this to get user count from firebase
+export async function getUserCount() {
+    return (await firestore.collection("users").get()).docs.length
+}
+
+// use this to get post count from firebase
+export async function getPostCount() {
+    return (await firestore.collection("Posts").get()).docs.length
+}
+
+export default firestore;
 // use -> import db from './firebase' 
 // from root to use this db collection
