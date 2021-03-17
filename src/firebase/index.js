@@ -1,6 +1,5 @@
 import 'firebase/database';
 import firebase from 'firebase';
-import 'dot-env';
 // import '@firebase/messaging';
 //import './sign-in screen';
 const config = {
