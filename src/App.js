@@ -12,6 +12,7 @@ import PrototypeReview from "./body/review";
 import AppStats from "./body/appStats";
 import Header from "./landing-page/drawer";
 import News from "./body/news";
+
 // import Background from "./image-assets/background-geoPick.png"
 const theme = createMuiTheme({
   typography: {
@@ -20,6 +21,7 @@ const theme = createMuiTheme({
 });
 
 function App() {
+
   return (
     <div>
       <ThemeProvider theme={theme}>
