@@ -11,8 +11,8 @@ import RoadMap from "./body/roadmap";
 import PrototypeReview from "./body/review";
 import AppStats from "./body/appStats";
 import Header from "./landing-page/drawer";
-import News from "./body/news";
-
+import AppNews from "./body/appNews";
+import { BrowserRouter as Router, Link, Switch, Route } from "react-router-dom";
 // import Background from "./image-assets/background-geoPick.png"
 const theme = createMuiTheme({
   typography: {
@@ -21,42 +21,51 @@ const theme = createMuiTheme({
 });
 
 function App() {
-
   return (
-    <div>
-      <ThemeProvider theme={theme}>
-        <div className="App">
-          <div className="App-header">
-            <Header />
-            <Landing />
-          </div>
-          <div className="body-theme">
-            <Body />
-          </div>
-          <div className="features-theme">
-            <Features />
-          </div>
-          <div style={{ background: "#1b1b1b" }}>
-            <RoadMap />
-          </div>
-          <div>
-            <PrototypeReview />
-          </div>
-          <div>
-            <AppStats />
-          </div>
-          <div className="team-members-theme">
-            <TeamMembers />
-          </div>
-          <div className="footer-theme">
-            <Footer />
-          </div>
-          <div>
-            <News />
-          </div>
-        </div>
-      </ThemeProvider>
-    </div>
+    <ThemeProvider theme={theme}>
+      <Router>
+        <Switch>
+          <Route exact path="/">
+            <div className="App">
+              <div className="App-header">
+                <Header />
+                <Landing />
+              </div>
+              <div className="body-theme">
+                <Body />
+              </div>
+              <div className="features-theme">
+                <Features />
+              </div>
+              <div style={{ background: "#1b1b1b" }}>
+                <RoadMap />
+              </div>
+              <div className="footer-theme">
+                <Footer />
+              </div>
+            </div>
+          </Route>
+          <Route exact path="/application">
+            <div className="App">
+              <div>
+                <PrototypeReview />
+              </div>
+              <div>
+                <AppStats />
+                <AppNews />
+              </div>
+            </div>
+          </Route>
+          <Route exact path="/about-us">
+            <div className="App">
+              <div className="team-members-theme">
+                <TeamMembers />
+              </div>
+            </div>
+          </Route>
+        </Switch>
+      </Router>
+    </ThemeProvider>
   );
 }
 

@@ -3,12 +3,14 @@ import React, { Component } from "react";
 import "./news.css";
 
 class News extends Component {
-  constructor(props) {
-    super(props);
+  constructor() {
+    super();
     this.state = {
-      data: [],
+      data: "Hey",
     };
-    this.searchNews = this.searchNews.bind(this);
+  }
+  componentDidMount() {
+    this.searchNews().then((result) => this.setState({ data: result }));
   }
   searchNews = async () => {
     const newDate = new Date();
@@ -30,9 +32,9 @@ class News extends Component {
           return response.json();
         })
         .then(function (jsonData) {
-          console.log(jsonData.articles[1].description);
-          // return jsonData.articles[1];
-          // this.setState({ data: jsonData.articles[1].description });
+          // console.log(jsonData.articles[1].description);
+          // return <div>{jsonData.articles[1].description}</div>;
+          this.setState({ data: jsonData.articles[1].description });
         });
     } catch (error) {
       console.log(error);
@@ -49,6 +51,7 @@ class News extends Component {
             console.log("it workedd!");
             return <div>{desc.authors}</div>;
           })} */}
+        {/* <div>{this.state.data}</div> */}
       </Box>
     );
   }

@@ -1,6 +1,6 @@
 import React from "react";
 import clsx from "clsx";
-import { makeStyles } from "@material-ui/core/styles";
+import { makeStyles, Typography, Box } from "@material-ui/core";
 import Drawer from "@material-ui/core/Drawer";
 import Button from "@material-ui/core/Button";
 import List from "@material-ui/core/List";
@@ -12,22 +12,28 @@ import InboxIcon from "@material-ui/icons/MoveToInbox";
 import MailIcon from "@material-ui/icons/Mail";
 import { IconButton } from "@material-ui/core";
 import MenuRoundedIcon from "@material-ui/icons/MenuRounded";
-const useStyles = makeStyles({
-  list: {
+import { useHistory, Link } from "react-router-dom";
+// const useStyles = makeStyles({
+//   list: {
+//     width: 250,
+//   },
+//   fullList: {
+//     width: "auto",
+//   },
+// });
+
+const useStyles = makeStyles((theme) => ({
+  root: {
     width: 250,
+    maxWidth: 360,
+    backgroundColor: "#1b1b1b",
   },
-  fullList: {
-    width: "auto",
-  },
-});
+}));
 
 export default function NavDrawer() {
   const classes = useStyles();
   const [state, setState] = React.useState({
-    top: false,
     left: false,
-    bottom: false,
-    right: false,
   });
 
   const toggleDrawer = (anchor, open) => (event) => {
@@ -44,21 +50,21 @@ export default function NavDrawer() {
   const list = (anchor) => (
     <div
       className={clsx(classes.list, {
-        [classes.fullList]: anchor === "top" || anchor === "bottom",
+        [classes.root]: anchor === "top" || anchor === "bottom",
       })}
       role="presentation"
       onClick={toggleDrawer(anchor, false)}
       onKeyDown={toggleDrawer(anchor, false)}
     >
       <List>
-        {["Inbox", "Starred", "Send email", "Drafts"].map((text, index) => (
-          <ListItem button key={text}>
+        <Typography variant="body">
+          <ListItem button>
             <ListItemIcon>
-              {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+              <InboxIcon />
             </ListItemIcon>
-            <ListItemText primary={text} />
+            <ListItemText primary="Inbox" />
           </ListItem>
-        ))}
+        </Typography>
       </List>
       <Divider />
       <List>
@@ -76,6 +82,7 @@ export default function NavDrawer() {
 
   return (
     <div>
+      <Box m={-5} />
       {["left"].map((anchor) => (
         <React.Fragment key={anchor}>
           <IconButton
@@ -83,8 +90,25 @@ export default function NavDrawer() {
             style={{ color: "#fafafa" }}
           >
             <MenuRoundedIcon />
+
             {/* more... */}
           </IconButton>
+          <Typography variant="button">
+            <Link to="/application">
+              <IconButton
+                style={{ color: "#fafafa", justifyContent: "center" }}
+              >
+                Application
+              </IconButton>
+            </Link>
+            <Link to="/about-us">
+              <IconButton
+                style={{ color: "#fafafa", justifyContent: "center" }}
+              >
+                About us
+              </IconButton>
+            </Link>
+          </Typography>
           <Drawer
             anchor={anchor}
             open={state[anchor]}

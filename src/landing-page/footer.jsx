@@ -63,7 +63,7 @@ export class Footer extends Component {
                     <FooterLink id="features" name="Features" />
 
                     <FooterLink id="roadmap" name="Roadmap" />
-                    <FooterLink id="review" name="Prototype Review" />
+                    {/* <FooterLink id="review" name="Prototype Review" /> */}
                     <Grid
                       item
                       style={{

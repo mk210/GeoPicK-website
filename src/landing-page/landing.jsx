@@ -35,7 +35,6 @@ export class Landing extends Component {
   render() {
     return (
       <div>
-        <Box m={-5} />
         <Grid
           container
           alignContent="center"
@@ -53,6 +52,7 @@ export class Landing extends Component {
               height="90px"
               gutterBottom
             />
+            <Box m={-10} />
             <Grid item>
               <Typography variant="h1" className="title">
                 Real Life.
