@@ -10,7 +10,7 @@ import {
   Grid,
 } from "@material-ui/core";
 import CountUp from "react-countup";
-import {getPostCount, getUserCount, getLikeCount} from '../firebase'
+import { getPostCount, getUserCount, getLikeCount } from "../firebase";
 
 const theme = createMuiTheme({
   typography: {
@@ -29,7 +29,7 @@ const StatsCard = (props) => {
           maxWidth: "25vw",
           wrap: "wrap",
           border: "3px solid #F56920",
-          boxShadow: "0px 100px 250px rgba(0, 0, 0, 0.25)",
+          boxShadow: "0px 0px 250px rgba(0, 0, 0, 0.25)",
           marginRight: "50px",
           padding: "20px",
           textAlign: "center",
@@ -102,13 +102,13 @@ class AppStats extends Component {
   state = {
     users: 0,
     posts: 0,
-    likes: 0
-  }
+    likes: 0,
+  };
   async componentDidMount() {
     const userCount = await getUserCount();
     const postCount = await getPostCount();
     const likeCount = await getLikeCount();
-    this.setState({users: userCount, posts: postCount, likes: likeCount});
+    this.setState({ users: userCount, posts: postCount, likes: likeCount });
   }
   render() {
     return (
