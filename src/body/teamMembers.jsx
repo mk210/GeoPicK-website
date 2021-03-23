@@ -10,15 +10,12 @@ import {
   Avatar,
   Grid,
   Box,
-  ThemeProvider,
-  createMuiTheme,
   IconButton,
   CardHeader,
   CardMedia,
   CardActions,
 } from "@material-ui/core";
 
-import FavoriteIcon from "@material-ui/icons/Favorite";
 import teamLeader from "../image-assets/team-leader.png";
 import backendAdmin from "../image-assets/admin.png";
 import designer from "../image-assets/pen-tool.png";
@@ -28,35 +25,35 @@ import dbConectivity from "../image-assets/database-connectivity.png";
 import GitHubIcon from "@material-ui/icons/GitHub";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import backend from "../image-assets/server.png";
-const theme = createMuiTheme({
-  typography: {
-    fontFamily: ["Montserrat", "sans-serif"].join(","),
-  },
-});
+// const theme = createMuiTheme({
+//   typography: {
+//     fontFamily: ["Montserrat", "sans-serif"].join(","),
+//   },
+// });
 
-function MemberCard(props) {
-  return (
-    <Grid item>
-      <Card className="main" style={{ borderRadius: "20px" }}>
-        <CardContent>
-          <div align="center">
-            <Avatar alt={props.name} src={props.icon} variant="rounded" />
-            <Box height="4px" />
-          </div>
-          <Typography variant="h5" component="h2">
-            {props.name}
-          </Typography>
-          <Typography className="subtitle">{props.position}</Typography>
-          <ThemeProvider theme={theme}>
-            <Typography variant="body2" component="p" color="textSecondary">
-              {props.desc}
-            </Typography>
-          </ThemeProvider>
-        </CardContent>
-      </Card>
-    </Grid>
-  );
-}
+// function MemberCard(props) {
+//   return (
+//     <Grid item>
+//       <Card className="main" style={{ borderRadius: "20px" }}>
+//         <CardContent>
+//           <div align="center">
+//             <Avatar alt={props.name} src={props.icon} variant="rounded" />
+//             <Box height="4px" />
+//           </div>
+//           <Typography variant="h5" component="h2">
+//             {props.name}
+//           </Typography>
+//           <Typography className="subtitle">{props.position}</Typography>
+//           <ThemeProvider theme={theme}>
+//             <Typography variant="body2" component="p" color="textSecondary">
+//               {props.desc}
+//             </Typography>
+//           </ThemeProvider>
+//         </CardContent>
+//       </Card>
+//     </Grid>
+//   );
+// }
 
 function MemberCardV2(props) {
   return (
