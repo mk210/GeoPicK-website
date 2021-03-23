@@ -14,6 +14,7 @@ import Header from "./landing-page/drawer";
 import AppNews from "./body/appNews";
 import { BrowserRouter as Router, Link, Switch, Route } from "react-router-dom";
 import TitleHeader from "./landing-page/titleHeader";
+import { useHistory } from "react-router-dom";
 // import Background from "./image-assets/background-geoPick.png"
 const theme = createMuiTheme({
   typography: {

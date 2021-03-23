@@ -64,7 +64,7 @@ export class Landing extends Component {
                   style={{ fontWeight: "600" }}
                   className="typewriter"
                 >
-                  Captured
+                  Captured.
                 </Typography>
                 <Grid item>
                   <ThemeProvider theme={fontTheme}>

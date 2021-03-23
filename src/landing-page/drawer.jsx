@@ -1,6 +1,13 @@
 import React from "react";
 import clsx from "clsx";
-import { makeStyles, Typography, Box } from "@material-ui/core";
+import {
+  makeStyles,
+  Typography,
+  Box,
+  ThemeProvider,
+  Grid,
+  createMuiTheme,
+} from "@material-ui/core";
 import Drawer from "@material-ui/core/Drawer";
 import Button from "@material-ui/core/Button";
 import List from "@material-ui/core/List";
@@ -13,6 +20,13 @@ import MailIcon from "@material-ui/icons/Mail";
 import { IconButton } from "@material-ui/core";
 import MenuRoundedIcon from "@material-ui/icons/MenuRounded";
 import { useHistory, Link } from "react-router-dom";
+// import { Link as scrollLink } from "react-scroll";
+import AppsRoundedIcon from "@material-ui/icons/AppsRounded";
+import InfoRoundedIcon from "@material-ui/icons/InfoRounded";
+import PinDropRoundedIcon from "@material-ui/icons/PinDropRounded";
+import FeaturedPlayListRoundedIcon from "@material-ui/icons/FeaturedPlayListRounded";
+import AccountTreeRoundedIcon from "@material-ui/icons/AccountTreeRounded";
+import { Link as ScrollLink } from "react-scroll";
 // const useStyles = makeStyles({
 //   list: {
 //     width: 250,
@@ -25,10 +39,38 @@ import { useHistory, Link } from "react-router-dom";
 const useStyles = makeStyles((theme) => ({
   root: {
     width: 250,
+    height: "100%",
     maxWidth: 360,
-    backgroundColor: "#1b1b1b",
+    background: "#1b1b1b",
+    // height: "auto",
   },
 }));
+
+const theme = createMuiTheme({
+  typography: {
+    fontFamily: ["Montserrat", "sans-serif"].join(","),
+  },
+});
+const marginValue = "10px";
+
+function FooterLink(props) {
+  return (
+    <Grid item style={{ paddingLeft: marginValue, paddingTop: marginValue }}>
+      <ScrollLink
+        activeClass="active"
+        to={props.id}
+        spy={true}
+        smooth={true}
+        duration={1000}
+        // className="secondary-button-text"
+      >
+        <Link style={{ textDecoration: "none", color: "#fafafa" }}>
+          {props.name}
+        </Link>
+      </ScrollLink>
+    </Grid>
+  );
+}
 
 export default function NavDrawer() {
   const classes = useStyles();
@@ -49,75 +91,135 @@ export default function NavDrawer() {
 
   const list = (anchor) => (
     <div
-      className={clsx(classes.list, {
+      className={clsx(classes.root, {
         [classes.root]: anchor === "top" || anchor === "bottom",
       })}
       role="presentation"
       onClick={toggleDrawer(anchor, false)}
       onKeyDown={toggleDrawer(anchor, false)}
     >
+      {/* <List>
+        <Typography variant="body">
+          <ListItem button>
+            <ListItemIcon>
+              <PinDropRoundedIcon style={{ color: "#fafafa" }} />
+            </ListItemIcon>
+            <scrollLink
+                        activeClass="active"
+                        to="body"
+                        spy={true}
+                        smooth={true}
+                        duration={1000}
+                        className="secondary-button-text"
+                      >
+              <ListItemText primary="What is GeoPicK?" />
+            </scrollLink>
+          </ListItem>
+          <ListItem button>
+            <ListItemIcon>
+              <FeaturedPlayListRoundedIcon style={{ color: "#fafafa" }} />
+            </ListItemIcon>
+            <Link to="/about-us" style={{ textDecoration: "none" }}>
+              <ListItemText primary="Features" />
+            </Link>
+          </ListItem>
+          <ListItem button>
+            <ListItemIcon>
+              <AccountTreeRoundedIcon style={{ color: "#fafafa" }} />
+            </ListItemIcon>
+            <Link to="/about-us" style={{ textDecoration: "none" }}>
+              <ListItemText primary="Product roadmap" />
+            </Link>
+          </ListItem>
+        </Typography>
+      </List> */}
+      {/* <Divider style={{ background: "#fafafa" }} /> */}
       <List>
         <Typography variant="body">
           <ListItem button>
             <ListItemIcon>
-              <InboxIcon />
+              <AppsRoundedIcon style={{ color: "#fafafa" }} />
             </ListItemIcon>
-            <ListItemText primary="Inbox" />
+            <Link to="/application" style={{ textDecoration: "none" }}>
+              <ListItemText primary="About the app" />
+            </Link>
+          </ListItem>
+          <ListItem button>
+            <ListItemIcon>
+              <InfoRoundedIcon style={{ color: "#fafafa" }} />
+            </ListItemIcon>
+            <Link to="/about-us" style={{ textDecoration: "none" }}>
+              <ListItemText primary="About Us" />
+            </Link>
           </ListItem>
         </Typography>
-      </List>
-      <Divider />
-      <List>
-        {["All mail", "Trash", "Spam"].map((text, index) => (
-          <ListItem button key={text}>
-            <ListItemIcon>
-              {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-            </ListItemIcon>
-            <ListItemText primary={text} />
-          </ListItem>
-        ))}
       </List>
     </div>
   );
 
   return (
     <div>
-      <Box m={-5} />
-      {["left"].map((anchor) => (
-        <React.Fragment key={anchor}>
-          <IconButton
-            onClick={toggleDrawer(anchor, true)}
-            style={{ color: "#fafafa" }}
-          >
-            <MenuRoundedIcon />
-
-            {/* more... */}
-          </IconButton>
-          <Typography variant="button">
-            <Link to="/application">
+      <ThemeProvider theme={theme}>
+        <Box m={-5} />
+        {["left"].map((anchor) => (
+          <React.Fragment key={anchor}>
+            <Grid container direction="row" spacing={2}>
               <IconButton
-                style={{ color: "#fafafa", justifyContent: "center" }}
+                onClick={toggleDrawer(anchor, true)}
+                style={{ color: "#fafafa" }}
               >
-                Application
+                <MenuRoundedIcon />
               </IconButton>
-            </Link>
-            <Link to="/about-us">
-              <IconButton
-                style={{ color: "#fafafa", justifyContent: "center" }}
-              >
-                About us
-              </IconButton>
-            </Link>
-          </Typography>
-          <Drawer
-            anchor={anchor}
-            open={state[anchor]}
-            onClose={toggleDrawer(anchor, false)}
-          >
-            {list(anchor)}
-          </Drawer>
-        </React.Fragment>
-      ))}
+              {/* <FooterLink id="features" name="Features" />
+              <FooterLink id="roadmap" name="Roadmap" /> */}
+            </Grid>
+            {/* <Typography variant="button">
+              <Link to="/application" style={{ textDecoration: "none" }}>
+                <IconButton
+                  style={{ color: "#fafafa", justifyContent: "center" }}
+                >
+                  Application
+                </IconButton>
+              </Link>
+              <Link to="/about-us" style={{ textDecoration: "none" }}>
+                <IconButton
+                  style={{ color: "#fafafa", justifyContent: "center" }}
+                >
+                  About us
+                </IconButton>
+              </Link>
+            </Typography> */}
+            <Drawer
+              anchor={anchor}
+              open={state[anchor]}
+              onClose={toggleDrawer(anchor, false)}
+            >
+              {list(anchor)}
+            </Drawer>
+          </React.Fragment>
+        ))}
+      </ThemeProvider>
     </div>
   );
 }
+
+// {
+//   <Link
+//     to="/application"
+//     style={{
+//       textDecoration: "none",
+//       height: "auto",
+//       width: "auto",
+//     }}
+//   >
+//     <Button
+//       variant="text"
+//       style={{
+//         // color: "#1b1b1b",
+//         justifyContent: "center",
+//       }}
+//     >
+//       Application
+//     </Button>
+//   </Link>
+// }
