@@ -1,6 +1,6 @@
-import { Box, IconButton, Toolbar, Typography, Grid } from "@material-ui/core";
+import { Box, IconButton, Toolbar } from "@material-ui/core";
 import React, { Component } from "react";
-import { useHistory, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import ArrowBackRoundedIcon from "@material-ui/icons/ArrowBackRounded";
 import HelpRoundedIcon from "@material-ui/icons/HelpRounded";
 import Logo from "../image-assets/logo.svg";

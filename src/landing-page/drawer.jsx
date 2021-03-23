@@ -9,24 +9,16 @@ import {
   createMuiTheme,
 } from "@material-ui/core";
 import Drawer from "@material-ui/core/Drawer";
-import Button from "@material-ui/core/Button";
 import List from "@material-ui/core/List";
-import Divider from "@material-ui/core/Divider";
 import ListItem from "@material-ui/core/ListItem";
 import ListItemIcon from "@material-ui/core/ListItemIcon";
 import ListItemText from "@material-ui/core/ListItemText";
-import InboxIcon from "@material-ui/icons/MoveToInbox";
-import MailIcon from "@material-ui/icons/Mail";
 import { IconButton } from "@material-ui/core";
 import MenuRoundedIcon from "@material-ui/icons/MenuRounded";
-import { useHistory, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 // import { Link as scrollLink } from "react-scroll";
 import AppsRoundedIcon from "@material-ui/icons/AppsRounded";
 import InfoRoundedIcon from "@material-ui/icons/InfoRounded";
-import PinDropRoundedIcon from "@material-ui/icons/PinDropRounded";
-import FeaturedPlayListRoundedIcon from "@material-ui/icons/FeaturedPlayListRounded";
-import AccountTreeRoundedIcon from "@material-ui/icons/AccountTreeRounded";
-import { Link as ScrollLink } from "react-scroll";
 // const useStyles = makeStyles({
 //   list: {
 //     width: 250,
@@ -51,26 +43,26 @@ const theme = createMuiTheme({
     fontFamily: ["Montserrat", "sans-serif"].join(","),
   },
 });
-const marginValue = "10px";
+// const marginValue = "10px";
 
-function FooterLink(props) {
-  return (
-    <Grid item style={{ paddingLeft: marginValue, paddingTop: marginValue }}>
-      <ScrollLink
-        activeClass="active"
-        to={props.id}
-        spy={true}
-        smooth={true}
-        duration={1000}
-        // className="secondary-button-text"
-      >
-        <Link style={{ textDecoration: "none", color: "#fafafa" }}>
-          {props.name}
-        </Link>
-      </ScrollLink>
-    </Grid>
-  );
-}
+// function FooterLink(props) {
+//   return (
+//     <Grid item style={{ paddingLeft: marginValue, paddingTop: marginValue }}>
+//       <ScrollLink
+//         activeClass="active"
+//         to={props.id}
+//         spy={true}
+//         smooth={true}
+//         duration={1000}
+//         // className="secondary-button-text"
+//       >
+//         <Link style={{ textDecoration: "none", color: "#fafafa" }}>
+//           {props.name}
+//         </Link>
+//       </ScrollLink>
+//     </Grid>
+//   );
+// }
 
 export default function NavDrawer() {
   const classes = useStyles();

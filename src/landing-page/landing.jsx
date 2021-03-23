@@ -12,7 +12,6 @@ import {
 import "./landingStyle.scss";
 // import styled from "styled-components";
 import { Link } from "react-scroll";
-import Header from "./drawer";
 const fontTheme = createMuiTheme({
   typography: {
     fontFamily: ["Montserrat", "sans-serif"].join(","),
