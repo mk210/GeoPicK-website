@@ -16,15 +16,28 @@ class TitleHeader extends Component {
               <ArrowBackRoundedIcon />
             </IconButton>
           </Link>
-          <img
-            classname="logo"
-            src={Logo}
-            alt="GeoPicK Logo"
-            width="200px"
-            height="90px"
-            gutterBottom
-            style={{ marginLeft: "auto", marginRight: "-25px" }}
-          />
+          <Link
+            to="/"
+            style={{
+              marginLeft: "auto",
+              marginRight: "-25px",
+              position: "relative",
+            }}
+          >
+            <img
+              classname="logo"
+              src={Logo}
+              alt="GeoPicK Logo"
+              width="200px"
+              height="90px"
+              gutterBottom
+              style={{
+                marginLeft: "auto",
+                marginRight: "auto",
+                position: "relative",
+              }}
+            />
+          </Link>
           <IconButton style={{ marginRight: "10px", marginLeft: "auto" }}>
             <HelpRoundedIcon />
           </IconButton>

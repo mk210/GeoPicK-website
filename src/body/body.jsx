@@ -31,7 +31,11 @@ export class Body extends Component {
             </Typography>
           </Grid>
           <Grid item>
-            <Paper className="body-card" elevation={24}>
+            <Paper
+              className="body-card"
+              elevation={24}
+              style={{ borderRadius: "50px" }}
+            >
               <ThemeProvider theme={theme}>
                 <Typography
                   variant="h5"
