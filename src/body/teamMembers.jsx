@@ -147,10 +147,16 @@ export class TeamMembers extends Component {
       <div>
         {/* <div align="center"> */}
         <Typography
-          variant="h2"
-          style={{ color: "#FAFAFA", padding: "3%", fontWeight: "600" }}
+          variant="h4"
+          style={{
+            color: "#FAFAFA",
+            padding: "1.5em",
+            paddingBottom: "2px",
+            fontWeight: "300",
+            // textAlign: "left",
+          }}
         >
-          Team Members
+          {/* Our team members */}
         </Typography>
         {/* </div> */}
 

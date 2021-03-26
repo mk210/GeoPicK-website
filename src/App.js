@@ -14,6 +14,7 @@ import Header from "./landing-page/drawer";
 import AppNews from "./body/appNews";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import TitleHeader from "./landing-page/titleHeader";
+import AboutApp from "./body/aboutApp";
 // import Background from "./image-assets/background-geoPick.png"
 const theme = createMuiTheme({
   typography: {
@@ -50,8 +51,8 @@ function App() {
             <div className="App">
               <TitleHeader />
               <div>
-                <AppStats />
                 <AppNews />
+                <AppStats />
               </div>
               <div>
                 <PrototypeReview />
@@ -62,6 +63,7 @@ function App() {
             <div className="App">
               <TitleHeader />
               <div className="team-members-theme">
+                <AboutApp />
                 <TeamMembers />
               </div>
             </div>

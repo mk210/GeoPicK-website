@@ -2,7 +2,7 @@ import { Box, IconButton, Toolbar } from "@material-ui/core";
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import ArrowBackRoundedIcon from "@material-ui/icons/ArrowBackRounded";
-import HelpRoundedIcon from "@material-ui/icons/HelpRounded";
+import ExitToAppIcon from "@material-ui/icons/ExitToApp";
 import Logo from "../image-assets/logo.svg";
 
 class TitleHeader extends Component {
@@ -39,8 +39,26 @@ class TitleHeader extends Component {
             />
           </Link>
           <IconButton style={{ marginRight: "10px", marginLeft: "auto" }}>
-            <HelpRoundedIcon />
+            <a
+              href="http://geopick.netlify.app/welcome"
+              target="blank"
+              style={{ color: "#fafafa" }}
+            >
+              <ExitToAppIcon />
+            </a>
           </IconButton>
+          {/* <Button
+            style={{
+              marginRight: "5px",
+              marginLeft: "auto",
+              padding: "-10px 2px -10px 2px",
+              borderRadius: "20px",
+              color: "#fafafa",
+              background: "#f56920",
+            }}
+          >
+            Try the app now!
+          </Button> */}
         </Toolbar>
       </Box>
     );

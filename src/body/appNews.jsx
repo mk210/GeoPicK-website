@@ -60,33 +60,47 @@ const AppNewsCard = (props) => {
 class AppNews extends Component {
   render() {
     return (
-      <Grid container style={{ justifyContent: "center" }}>
-        <AppNewsCard
-          title="Check out the All-New Explore page"
-          date="19/06/2021"
-          desc="I need some contect for this and all that!"
-        />
-        <AppNewsCard
-          title="Check out the All-New Explore page"
-          date="19/06/2021"
-          desc="I need some contect for this and all that!"
-        />
-        <AppNewsCard
-          title="Check out the All-New Explore page"
-          date="19/06/2021"
-          desc="I need some contect for this and all that!"
-        />
-        <AppNewsCard
-          title="Check out the All-New Explore page"
-          date="19/06/2021"
-          desc="I need some contect for this and all that!"
-        />
-        <AppNewsCard
-          title="Check out the All-New Explore page"
-          date="19/06/2021"
-          desc="I need some contect for this and all that!"
-        />
-      </Grid>
+      <Box>
+        <Typography
+          variant="h2"
+          style={{ fontWeight: "500", padding: "0.8em" }}
+        >
+          About our application
+        </Typography>
+        <Grid container style={{ justifyContent: "center" }}>
+          <AppNewsCard
+            title="The Final App"
+            date="March 2021"
+            desc="The most awaited application is finally completed. Find the app's trailer on our official social media channels"
+          />
+          <AppNewsCard
+            title="Cross-platform sharing"
+            date="February 2021"
+            desc="With the latest update of the app, users from all accross the world can share posts using the inbuilt share button."
+          />
+          <AppNewsCard
+            title="Beta App release"
+            date="February 2021"
+            desc="The beta version of the app is now released. Share it with your friends and express your opinions on our official social media channels."
+          />
+          <AppNewsCard
+            title="App interfaces designed"
+            date="January 2021"
+            desc="Thank you for the support everyone, we are almost done with the implementation of our beta release. All ready for the beta release of the app 😊"
+          />
+          <AppNewsCard
+            title="App prototype"
+            date="December 2020"
+            desc="After consulting with the developers and designers, we are finally ready to share the prototype with the world. We have carefully designed the app for all ages and backgrounds."
+          />
+
+          <AppNewsCard
+            title="Inititating Product vision"
+            date="October 2020"
+            desc="GeoPicK, the name of our wonderful application which is the solution to connect the world through the nature around them. We will be back with more news about the app and the release of the beta version of the application!🤞"
+          />
+        </Grid>
+      </Box>
     );
   }
 }
