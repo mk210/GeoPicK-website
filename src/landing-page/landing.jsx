@@ -33,14 +33,14 @@ const theme = createMuiTheme({
 export class Landing extends Component {
   render() {
     return (
-      <div>
+      <div id="landing" style={{ display: "flex" }}>
         <Grid
           container
           alignContent="center"
           direction="column"
           justify="flex-start"
           spacing={10}
-          wrap="wrap"
+          // wrap="wrap"
         >
           <Grid item>
             <img

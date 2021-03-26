@@ -10,8 +10,8 @@
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
-  min-height: 48vw;
-  /* height: 100%; */
+  height: 50rem;
+  /* heigh0t: 100%; */
   display: flex;
   flex-direction: column;
   align-items: center;

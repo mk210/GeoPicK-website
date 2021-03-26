@@ -60,6 +60,7 @@ export class Footer extends Component {
                   }}
                 >
                   <Grid container spacing={1} direction="row" justify="center">
+                    <FooterLink id="landing" name="Back to top" />
                     <FooterLink id="features" name="Features" />
 
                     <FooterLink id="roadmap" name="Roadmap" />
