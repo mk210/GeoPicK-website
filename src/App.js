@@ -5,7 +5,8 @@ import { ThemeProvider, createMuiTheme } from "@material-ui/core/styles";
 // import {Box} from '@material-ui/core';
 import { Body } from "./body/body";
 import { TeamMembers } from "./body/teamMembers";
-import { Features } from "./body/features";
+// import { Features } from "./body/features";
+import Features from "./body/featuresV2";
 import { Footer } from "./landing-page/footer";
 import RoadMap from "./body/roadmap";
 import PrototypeReview from "./body/review";
@@ -15,6 +16,8 @@ import AppNews from "./body/appNews";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import TitleHeader from "./landing-page/titleHeader";
 import AboutApp from "./body/aboutApp";
+import { Box, Typography } from "@material-ui/core";
+import Trailer from "./body/trailer";
 // import Background from "./image-assets/background-geoPick.png"
 const theme = createMuiTheme({
   typography: {
@@ -37,6 +40,23 @@ function App() {
                 <Body />
               </div>
               <div className="features-theme">
+                <Typography
+                  variant="h2"
+                  style={{ fontWeight: "600", color: "#1b1b1b" }}
+                >
+                  Features
+                </Typography>
+                <Box m={-2} />
+                <Typography
+                  variant="body"
+                  style={{
+                    fontWeight: "normal",
+                    fontSize: "18px",
+                    color: "#1b1b1b",
+                  }}
+                >
+                  Click on the arrows to transition👇{" "}
+                </Typography>
                 <Features />
               </div>
               <div style={{ background: "#1b1b1b" }}>
@@ -51,8 +71,9 @@ function App() {
             <div className="App">
               <TitleHeader />
               <div>
-                <AppNews />
+                <Trailer />
                 <AppStats />
+                <AppNews />
               </div>
               <div>
                 <PrototypeReview />

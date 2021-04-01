@@ -61,12 +61,12 @@ class AppNews extends Component {
   render() {
     return (
       <Box>
-        <Typography
+        {/* <Typography
           variant="h2"
-          style={{ fontWeight: "500", padding: "0.8em" }}
+          style={{ fontWeight: "600", padding: "0.8em" }}
         >
           About our application
-        </Typography>
+        </Typography> */}
         <Grid container style={{ justifyContent: "center" }}>
           <AppNewsCard
             title="The Final App"

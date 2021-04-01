@@ -77,7 +77,7 @@ export class Landing extends Component {
 
                   <Grid item justify="center">
                     <ThemeProvider theme={theme}>
-                      <Badge color="secondary" badgeContent="BETA">
+                      <Badge color="secondary" badgeContent="V1.0">
                         <Button
                           variant="contained"
                           color="primary"

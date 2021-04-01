@@ -175,6 +175,8 @@ export class TeamMembers extends Component {
             desc="A scrum master who likes to complete all the tasks given
             effectively and efficiently"
             postPic="https://i.pinimg.com/564x/3b/da/8a/3bda8adf2ed4433862eb132519931886.jpg"
+            github="https://github.com/ms374-HW"
+            linkedin="https://www.linkedin.com/in/megha-sharma-b00ba7190/"
           />
           {/* <MemberCard
             name="Megha Sharma"
@@ -190,6 +192,7 @@ export class TeamMembers extends Component {
             desc="A Database handler who can structure data with ease."
             icon={backendAdmin}
             postPic="https://i.pinimg.com/564x/0e/12/40/0e124001d765882a507f185a640f0d57.jpg"
+            github="https://github.com/hsggamer"
           />
 
           <MemberCardV2
@@ -198,6 +201,7 @@ export class TeamMembers extends Component {
             desc="Database administrator that can structure out data at it's best efficiency."
             icon={backendAdmin}
             postPic="https://i.pinimg.com/564x/af/04/fd/af04fddb905b5447dfa27165ec089c25.jpg"
+            github="https://github.com/adt6"
           />
 
           <MemberCardV2
@@ -217,6 +221,8 @@ export class TeamMembers extends Component {
             desc="The go-to react developer specializing in Typescript."
             icon={developer}
             postPic="https://i.pinimg.com/564x/7c/87/d0/7c87d00d7942c296f005d5e601827257.jpg"
+            github="https://github.com/GliderCodes"
+            linkedin="https://www.linkedin.com/in/jessett/"
           />
 
           <MemberCardV2
@@ -225,6 +231,8 @@ export class TeamMembers extends Component {
             desc="A skilled wordsmith and a creative minded dev."
             icon={writer}
             postPic="https://i.pinimg.com/564x/c9/2c/89/c92c89c8783336bc0ab59e5141774384.jpg"
+            github="https://github.com/JeetSolanki999"
+            linkedin="https://www.linkedin.com/in/jeet-kailash-solanki-b841b71bb/"
           />
 
           <MemberCardV2
@@ -233,6 +241,8 @@ export class TeamMembers extends Component {
             desc="An agile dev who manages backend + frontend connectivity easily."
             icon={dbConectivity}
             postPic="https://i.pinimg.com/564x/a4/44/83/a444831f3ef2b2f81e16a189a26c92b9.jpg"
+            github="https://github.com/syedkhajahussainsa"
+            linkedin="https://www.linkedin.com/in/syed-khaja-hussain-531b491ba/"
           />
 
           <MemberCardV2
@@ -241,6 +251,8 @@ export class TeamMembers extends Component {
             desc="A database user who aims for ease of use for everyone."
             icon={backend}
             postPic="https://i.pinimg.com/564x/14/61/f8/1461f84963533f04637e35a57c669386.jpg"
+            github="https://github.com/RanaATalha"
+            linkedin="https://www.linkedin.com/in/rana-talha-145a341b9/"
           />
         </Grid>
       </div>

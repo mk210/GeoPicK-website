@@ -113,8 +113,8 @@ class AppStats extends Component {
   render() {
     return (
       <Box style={{ padding: "20px" }}>
-        <Typography variant="h3" style={{ fontWeight: "bold" }}>
-          Application statistics
+        <Typography variant="h2" style={{ fontWeight: "600" }}>
+          About our App
         </Typography>
         <br></br>
         <Grid

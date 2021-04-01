@@ -1,9 +1,6 @@
 import { Typography } from "@material-ui/core";
 import React, { useState } from "react";
-import {
-  VerticalTimeline,
-  VerticalTimelineElement,
-} from "react-vertical-timeline-component";
+import { VerticalTimelineElement } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
 import { ThemeProvider, createMuiTheme } from "@material-ui/core";
 
@@ -18,7 +15,6 @@ import { ThemeProvider, createMuiTheme } from "@material-ui/core";
 // } from "../components/colors";
 // import { primaryFont, secondaryFont } from "./fonts";
 import "../index.css";
-import TimelineItem from "@material-ui/lab/TimelineItem";
 
 const theme = createMuiTheme({
   typography: {
