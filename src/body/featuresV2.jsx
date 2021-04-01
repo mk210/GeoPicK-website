@@ -14,9 +14,9 @@ import AwsSliderStyles from "react-awesome-slider/src/styled/scale-out-animation
 class Features extends Component {
   render() {
     return (
-      <Box style={{ width: 1000 }}>
+      <Box style={{ width: 1000 }} id="features">
         <AwesomeSlider cssModule={AwsSliderStyles}>
-          <div data-src={One} />
+          <div data-src={One} width="auto" />
           <div data-src={Two} />
           <div data-src={Three} />
           <div data-src={Four} />
